@@ -1,0 +1,287 @@
+:root { /* Desclara variables para toda extructura, tiene más prioridad que html*/
+  
+          --bnavegador: hsla(55, 53%, 66%, 0.855);
+          --efechover:  #ffffff4d;
+          --sectorifooter: #eec886c2;
+          --h1: #eec886c2;
+          --h2: #a39d5c;
+          --h3: #d1ca78;
+          --main_p: #3d3b22;
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+   .krub-regular { /* fuente importada desde Google fonts */
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .krub-bold {
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none; /* sirve para eliminar las lineas del menu */
+  }
+
+
+  .header { /*se define la posicion y el color del encabezado */
+    height: auto;
+    width: 350%
+    
+  }
+  
+  .imagen {
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+     
+   }
+
+  img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, 15 .5 )   ;
+  
+
+  } 
+
+
+
+
+  .header logo {
+    width: 0;
+    height: auto;
+    display:flex;
+    box-sizing:border-box ;
+    padding: 1000px;
+  
+  }
+
+.empresa h1 { /* ajustes del H1 */
+  font-size: 9vw;
+  color: var(--h1);
+  text-align: center;
+}
+
+
+/*BARRA MENU */
+
+.container__menu {
+width: 100%; /*para que nos ocupe todo el ancho */
+height: 45px; /*el ancho de la barra del menu de inicio, coche, motos, furgonetas */
+background: var(--bnavegador);/* se le da el color predeterminado que nos solicitaron en el ejercicio */
+padding: 0px 20px; /* para cuando se haga responsib nos guarde un margen y no choque con el inicio*/
+
+}
+
+.menu {
+max-width: 1200px; /* Tamaño max de 1200pixeles para mantener la misma linea. */
+margin:auto; /*  para que se nos centre automaticamente y tener el mismo posicionamiento */
+height: 100% /* para posicionar los menus y  detecte el medio horizontal de la linea del menu */
+
+
+}
+
+nav {
+height: 100%; /* para dar tamano al sombreado al pasar por el menu */
+
+}
+
+nav > ul { /* se le pone ">" para decirle que se valla directamente al "ul" que le sigue para que el submenu, tenga diferentes propiedades que el menu principal */
+height: 100%;
+display:flex; /* para organizar los listado uno al lado del otro */
+justify-content:space-evenly;
+
+}
+
+nav > ul > li { /* se le pone un height 100% para posicionalos todos en el mismo sitio.*/
+list-style: none;   /*eliminar los puntos de los menus pero no a los submenus porque utilizamos ">" en el "nav>ul>li" */    
+position:static; /* para que el submenu se relacione on el menu. la posicion. */
+
+}
+
+
+nav > ul > li a {
+ width:100%;
+ height: auto; /*tamaño del sombreado del hover */
+ padding: 15px; /* posicionamiento de los menus */
+ align-items:center;
+  /* para separar los menus lateralmente entre ellos */
+ display:block; /* para posicionar los menus en el medio de la barra de menu */
+text-transform: uppercase; /* para poner todos los menus en MAYUSCULAS */
+
+}
+
+nav>ul>li>a:hover {
+    transform: scale(1.1); /* Esta función hace que parpadee el menu al pasar sobre él */
+    background: var(--efechover); /* se le da el efecto que se solicito en el ejercicio con dicho color */
+    
+}
+
+footer{
+  width: 100%;
+background: var(--sectorifooter);
+font-size: 1em;
+text-align: center;
+padding: 12px; /* nos da el grosor de la barra del footer */
+
+}
+
+
+main > section > div > p {
+  font-size: 1.25em ;
+  color:var(--main_p);
+
+}
+/*ESTILOS PARA LA SECCION COCHE */
+
+
+#coche {
+  margin-bottom: 20px;
+
+}
+
+#coche h2{
+  font-size: 3.5em ;
+  color:var(--h2);
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.contenedor-imagenes { /* agrupa todas las imagenes con un 25% cada un del espacio */
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+gap: 32px;
+
+}
+
+.contenedor-imagenes img {
+
+border-radius: 12px;
+width: 100%;
+height: 90%;
+box-shadow: 10px 0px 50px #000;
+
+
+}
+
+@media (max-width: 768px) {
+  .contenedor-imagenes img {
+    width: 100%;
+  }
+}
+
+.contenedor-imagenes h3{
+  font-size:2.5em ;
+  color:var(--h3); 
+}
+
+/*ESTILO DE PAGINA ESPTECNICAS */
+
+
+  
+
+
+#vehiculo ul.caracteristicas {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+}
+  
+ #vehiculo h2 {
+  font-size: 3.5em;
+  color:var(--h2);
+  display:flex;
+  justify-content:center;
+    
+}
+
+.fiat {
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 15 .5 )   ;
+
+text-align: center; 
+
+}
+  
+
+#vehiculo .precio {
+  
+  display:flex;
+  justify-content:center;
+  font-size: 1.25em;
+  color: var(--main_p);
+  font-weight: bold;
+  margin-bottom: 19px;
+
+}
+
+
+#vehiculo .boton {
+  font-size:2.5em ;
+  color:var(--h3);
+  padding: 10px 20px
+  text-decoration  none;
+  display: inline-flex;
+    text-align: center;
+  justify-content: space-evenly;
+  width: 120%;
+
+}
+
+
+/* PÁGINA PORTADA */
+
+main h1 {
+  font-size: 9vw;
+  color: var(--h1);
+
+}
+
+main h2 {
+  font-size: 3.5em ;
+  color:var(--h2);
+
+}
+
+.descripcion p{
+  font-size: 1.25em ;
+  color:var(--main_p);
+
+}
+
+.servicios h2 {
+  font-size: 3.5em ;
+  color:var(--h2);
+
+}
+
+footer p {
+  font-size: 1.25em ;
+  color:var(--main_p);
+
+}
+
+.boton{
+
+  text-align: center;
+  justify-content: space-evenly;
+
+}
+
+.boton h3 {
+ font-size:2.5em ;
+color:var(--h3);
+
+}
